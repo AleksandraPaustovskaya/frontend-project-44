@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 
-export default askingName =>  {
+export default () =>  {
 
 	console.log('May I have your name?');
 
