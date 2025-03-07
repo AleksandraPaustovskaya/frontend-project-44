@@ -3,4 +3,5 @@
 import name from '../src/cli.js'
 
 console.log('Welcome to the Brain Games!');
-name();
+let userName = name();
+console.log(`Hello, ${userName}!`);
