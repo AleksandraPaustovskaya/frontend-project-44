@@ -8,6 +8,4 @@ const isName = () => {
   return name
 }
 
-isName()
-
 export default isName
