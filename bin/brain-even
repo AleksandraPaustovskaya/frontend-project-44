@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 import readline from 'readline-sync'
 import name from '../src/cli.js'
+let userName = name()
+
 
 const playEven = () => {
   let counterAnswers = 0
-  let userName = name()
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   for (let i = 0; i < 3; i++) {
-    let number = Number(Math.floor(Math.random() * 1000 % 1000))
+    let number = Number(Math.floor(Math.random() * 100 % 100))
     console.log(`Question: ${number}`)
     const evening = readline.question('Your answer: ') // === 'yes' ? true : false
     // console.log(evening);
@@ -32,6 +33,5 @@ const playEven = () => {
   }
 }
 
-playEven()
-
+playEven(userName)
 export default playEven
