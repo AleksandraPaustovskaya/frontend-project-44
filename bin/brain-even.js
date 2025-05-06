@@ -10,10 +10,10 @@ const playEven = () => {
 
   for (let i = 0; i < 3; i++) {
     let number = Number(Math.floor(Math.random() * 1000 % 1000))
-    console.log(`Question:${number}`)
-    const evening = readline.question('Your answe: ') //=== 'yes' ? true : false
+    console.log(`Question: ${number}`)
+    const evening = readline.question('Your answe: ') // === 'yes' ? true : false
     // console.log(evening);
-    
+
     if (number % 2 === 0 && evening === 'yes') {
       console.log('Correct!')
       counterAnswers++
