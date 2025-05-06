@@ -9,7 +9,7 @@ const playEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   for (let i = 0; i < 3; i++) {
-    let number = Math.floor(Math.random() * 1000 % 1000)
+    let number = Number(Math.floor(Math.random() * 1000 % 1000))
     console.log(`Question:${number}`)
     const evening = readline.question('Your answe: ') //=== 'yes' ? true : false
     // console.log(evening);
