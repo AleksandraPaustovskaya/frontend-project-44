@@ -6,24 +6,30 @@ const userName = name()
 const randomFrom1to99 = () => {
     const rand = Math.floor(Math.random() * 100)
     return rand
-  }
+}
+
 
 const playGame = (rool, play) => {
-    let i = 3;
+    let i = 0;
 
     console.log(rool)
-    while (i > 0) {
-    const f = play()
-    const answer = Number(readline.question('Your answer: '))
+    while (i < 3) {
+    const rightAnswer = play()
+    const answer = readline.question('Your answer: ')
 
-    console.log(f)
+    // console.log(f)
 
-    f === answer ? console.log('Correct!') : i = 0;
+    rightAnswer === answer ? console.log('Correct!') : i =-1;
       
-      i--
+      i++
+      if (i === 0) {
+        console.log(`Let's try again, ${userName}!`)
+        break
+      } else if (i === 3) {
+        console.log(`Congratulations, ${userName}!`)
+      }
+
     }
-    console.log(i === 0 ? `Congratulations, ${userName}!` : `Let's try again, ${userName}!`) 
-    
 
 }
 
