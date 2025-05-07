@@ -5,7 +5,8 @@
   "description": "[![Actions Status](https://github.com/AleksandraPaustovskaya/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AleksandraPaustovskaya/frontend-project-44/actions)",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even"
+    "brain-even": "bin/brain-even",
+    "brain-calc": "bin/brain-calc"
   },
   "homepage": "https://github.com/AleksandraPaustovskaya/frontend-project-44#readme",
   "bugs": {
