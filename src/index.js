@@ -1,5 +1,7 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
+const userName = name()
+
 
 const randomFrom1to99 = () => {
     const rand = Math.floor(Math.random() * 100)
@@ -7,7 +9,6 @@ const randomFrom1to99 = () => {
   }
 
 const playGame = (rool, play) => {
-    const userName = name()
     let i = 3;
 
     console.log(rool)
