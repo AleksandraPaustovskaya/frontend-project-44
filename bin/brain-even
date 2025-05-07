@@ -1,37 +1,20 @@
 #!/usr/bin/env node
-import readline from 'readline-sync'
-import name from '../src/cli.js'
-let userName = name()
+import {randomFrom1to99, playGame} from '../src/index.js'
+const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no".'
+
 
 
 const playEven = () => {
-  let counterAnswers = 0
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".')
-
-  for (let i = 0; i < 3; i++) {
-    let number = Number(Math.floor(Math.random() * 100 % 100))
+    let number = randomFrom1to99()
     console.log(`Question: ${number}`)
-    const evening = readline.question('Your answer: ') // === 'yes' ? true : false
-    // console.log(evening);
+ 
+    const answer = number % 2 === 0 ? 'yes' : 'no'
 
-    if (number % 2 === 0 && evening === 'yes') {
-      console.log('Correct!')
-      counterAnswers++
-    }
-    else if (number % 2 === 1 && evening === 'no') {
-      console.log('Correct!')
-      counterAnswers++
-    }
-    else {
-      console.log(`Let's try again, ${userName}!`)
-      break
-    }
-    if (counterAnswers === 3) {
-      console.log(`Congratulations, ${userName}!`)
-    }
-  }
+    return answer    
 }
 
-playEven(userName)
-export default playEven
+playGame(evenPlayRools, playEven)
+
+
+// playEven(userName)
+// export default playEven
