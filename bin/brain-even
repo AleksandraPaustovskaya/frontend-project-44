@@ -21,4 +21,4 @@ playGame(evenPlayRools, playEven)
 //console.log(playEven())
 
 // playEven(userName)
-// export default playEven
+export default playEven

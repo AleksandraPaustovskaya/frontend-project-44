@@ -1,10 +1,13 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
-const pleyerName = name()
 
 
 const helloWorld = (rool='') => {
-  
+  const pleyerName = name()
+  if(rool) {
+      console.log(rool)
+  }
+  return name
 }
 
 const randomFrom1to99 = (numberOfNumbers = 2) => {
@@ -19,11 +22,10 @@ const question = (str) => {
   return answer
 }
 
-const playGame = (rool, play) => {
-  if(rool) {
-      console.log(rool)
-  }
 
+const playGame = (rool, play) => {
+  
+  const playerName = helloWorld(rool);
   let i = 0
 
   while (i < 3) {
@@ -36,13 +38,13 @@ const playGame = (rool, play) => {
     i++
     if (i === 0) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`)
-      console.log(`Let's try again, ${pleyerName}!`)
+      console.log(`Let's try again, ${playerName}!`)
       break
     }
     else if (i === 3) {
-      console.log(`Congratulations, ${pleyerName}!`)
+      console.log(`Congratulations, ${playerName}!`)
     }
   }
 }
 
-export { randomFrom1to99, playGame, question, helloWorld }
+export { randomFrom1to99, playGame, question}
