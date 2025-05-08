@@ -9,24 +9,21 @@ const playGCD = () => {
 
     let counter = 1;
     let gcd = b;
-    let answer
 
     question(`${a} ${b}`)
 
 
-    while (b/counter >= 1) {
-        gcd = b/counter
-        if (Math.floor(b/gcd)*gcd === b) {
-            if (Math.floor(a/(gcd))*gcd === a) {
-                answer = `${gcd}`
-                return answer
-            }
-        }
-        counter++
-    }
+    // while (b/counter >= 1) {
+    //     gcd = b/counter
+    //     if (Math.floor(b/gcd)*gcd === b) {
+    //         if (Math.floor(a/(gcd))*gcd === a) {
+    //             return `${gcd}`
+    //         }
+    //     }
+    //     counter++
+    // }
 
-    answer = gcd
-    return `${answer}`
+    return `${gcd}`
 }
 
 
