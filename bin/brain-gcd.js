@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import { getJSDocEnumTag } from 'typescript';
-import {randomFrom1to99, playGame} from '../src/index.js'
-const gcdPlayRools = 'Find the grietest common divisor of given numbers'
+import {playGame, randomFrom1to99, question} from '../src/index.js'
+const gcdPlayRools = 'Find the greatest common divisor of given numbers'
 
 const isGSD = (max, min) => {
-    console.log(max, min)
+    question(`${max} ${min}`)
     let counter = 1;
     let gsd = min;
     while (min/counter >= 1) {
