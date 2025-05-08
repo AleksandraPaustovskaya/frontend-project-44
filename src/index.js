@@ -14,7 +14,7 @@ const helloWorld = () => {
 const randomFrom1to99 = (numberOfNumbers = 2) => {
   let number = 10 ** numberOfNumbers
   const rand = Math.floor(Math.random() * number)
-  return rand
+  return Number(rand)
 }
 
 const question = (str1, str2 = '') => {
