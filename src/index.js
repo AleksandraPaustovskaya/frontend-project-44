@@ -6,13 +6,12 @@ import name from '../src/cli.js'
 const randomFrom1to99 = (numberOfNumbers = 2) => {
   let number = 10 ** numberOfNumbers
   const rand = Math.floor(Math.random() * number)
-  return Number(rand)
+  return rand
 }
 
 const question = (str) => {
-  console.log(`Question: `, str)
-  const answer = readline.question('Your answer: ')
-  return answer
+  console.log(`Question: ${str}`)
+  
 }
 
 
@@ -23,12 +22,15 @@ const playGame = (rool, play) => {
             console.log(rool)
         }
         return userName
-      }
-  const playerName = helloWorld(rool);
-  let i = 0
+    }
+    const playerName = helloWorld(rool);
+  
+    let i = 0
 
   while (i < 3) {
-    const [rightAnswer, answer] = play()
+    const rightAnswer = play()
+
+    const answer = readline.question('Your answer: ')
 
     // console.log(f)
 

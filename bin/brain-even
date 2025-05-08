@@ -11,11 +11,10 @@ const playEven = () => {
   //const userName = name()
     let number = randomFrom1to99()
     question(`${number}`)
-    const answer = readline.question('Your answer: ')
     
     let rightAnswer = number % 2 === 0 ? 'yes' : 'no'
 
-    return [rightAnswer, answer]   
+    return rightAnswer   
 }
 
 playGame(evenPlayRools, playEven)
