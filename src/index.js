@@ -56,4 +56,4 @@ const playGame = (rool, play) => {
 
 }
 
-export {randomFrom1to99, playGame, question}
+export {randomFrom1to99, playGame, question, helloWorld}
