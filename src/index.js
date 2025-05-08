@@ -1,6 +1,17 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
-const userName = name()
+
+
+const helloWorld = () => {
+    console.log('Welcome to the Brain Games!')
+    
+    console.log('May I have your name?')
+    const userName = name()
+    console.log(`Hello, ${userName}!`)
+
+    return userName
+}
+
 
 
 const randomFrom1to99 = (numberOfNumbers = 2) => {
@@ -16,6 +27,9 @@ const question = (str1, str2='') => {
 
 
 const playGame = (rool, play) => {
+
+    const pleyerName = helloWorld()
+
     let i = 0;
 
     console.log(rool)
@@ -31,10 +45,11 @@ const playGame = (rool, play) => {
       if (i === 0) {
 
 
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'\nLet's try again, ${userName}!`)
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`)
+        console.log(`Let's try again, ${pleyerName}!`)
         break
       } else if (i === 3) {
-        console.log(`Congratulations, ${userName}!`)
+        console.log(`Congratulations, ${pleyerName}!`)
       }
 
     }
