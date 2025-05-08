@@ -10,18 +10,18 @@ const playGCD = () => {
     let counter = 1;
     let gcd = b;
 
-    console.log('Question: '`${a} ${b}`)
+    console.log('Question: ',`${a} ${b}`)
 
 
-    // while (b/counter >= 1) {
-    //     gcd = b/counter
-    //     if (Math.floor(b/gcd)*gcd === b) {
-    //         if (Math.floor(a/(gcd))*gcd === a) {
-    //             return `${gcd}`
-    //         }
-    //     }
-    //     counter++
-    // }
+    while (b/counter >= 1) {
+        gcd = b/counter
+        if (Math.floor(b/gcd)*gcd === b) {
+            if (Math.floor(a/(gcd))*gcd === a) {
+                return `${gcd}`
+            }
+        }
+        counter++
+    }
 
     return `${gcd}`
 }
