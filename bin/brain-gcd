@@ -3,25 +3,25 @@ import { getJSDocEnumTag } from 'typescript';
 import {playGame, randomFrom1to99, question} from '../src/index.js'
 const gcdPlayRools = 'Find the greatest common divisor of given numbers'
 
-const playGSD = () => {
+const playGCD = () => {
     let a = randomFrom1to99(3)
     let b = randomFrom1to99()
 
-    question(`${a} ${b}`)
+    question(a, b)
     let counter = 1;
-    let gsd = b;
+    let gcd = b;
 
     while (b/counter >= 1) {
-        gsd = b/counter
-        if (Math.floor(b/gsd)*gsd === b) {
-            if (Math.floor(a/(gsd))*gsd === a) {
-                return `${gsd}`
+        gcd = b/counter
+        if (Math.floor(b/gcd)*gcd === b) {
+            if (Math.floor(a/(gcd))*gcd === a) {
+                return `${gcd}`
             }
         }
         counter++
     }
-    return `${gsd}`
+    return `${gcd}`
 }
 
 
-playGame(gcdPlayRools, playGSD)
+playGame(gcdPlayRools, playGCD)
