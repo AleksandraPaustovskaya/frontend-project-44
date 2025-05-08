@@ -1,13 +1,15 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
 
-const helloWorld = () => {
+const helloWorld = (rool='') => {
   console.log('Welcome to the Brain Games!')
 
   console.log('May I have your name?')
   const userName = name()
   console.log(`Hello, ${userName}!`)
-
+  if(rool) {
+      console.log(rool)
+  }
   return userName
 }
 
@@ -22,11 +24,10 @@ const question = (str) => {
 }
 
 const playGame = (rool, play) => {
-  const pleyerName = helloWorld()
+  const pleyerName = helloWorld(rool)
 
   let i = 0
 
-  console.log(rool)
   while (i < 3) {
     const [ask, rightAnswer] = play()
     question(ask)

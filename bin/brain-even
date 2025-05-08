@@ -2,18 +2,20 @@
 import {randomFrom1to99, playGame, question} from '../src/index.js'
 const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no".'
 
+const evenLog = (num) => num % 2 === 0 ? 'yes' : 'no'
 
 
 const playEven = () => {
     let number = randomFrom1to99()
+
  
-    const answer = number % 2 === 0 ? 'yes' : 'no'
+    let answer = evenLog(number)
 
     return [number, answer]    
 }
 
 playGame(evenPlayRools, playEven)
-
+//console.log(playEven())
 
 // playEven(userName)
 // export default playEven
