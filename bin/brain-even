@@ -10,7 +10,7 @@ const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no"
 const playEven = () => {
   //const userName = name()
     let number = randomFrom1to99()
-    console.log(`Question: ${number}`)
+    question(`${number}`)
     const answer = readline.question('Your answer: ')
     
     let rightAnswer = number % 2 === 0 ? 'yes' : 'no'
