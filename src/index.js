@@ -10,7 +10,7 @@ const randomFrom1to99 = (numberOfNumbers = 2) => {
 }
 
 const question = (str1, str2='') => {
-    console.log('Question:', str1, str2)
+    console.log('Question:', str1, str2, ' ')
     
 }
 
