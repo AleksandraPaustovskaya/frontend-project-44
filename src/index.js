@@ -3,8 +3,9 @@ import name from '../src/cli.js'
 const userName = name()
 
 
-const randomFrom1to99 = () => {
-    const rand = Math.floor(Math.random() * 100)
+const randomFrom1to99 = (numberOfNumbers = 2) => {
+    let number = 10**numberOfNumbers
+    const rand = Math.floor(Math.random() * number)
     return rand
 }
 
@@ -23,7 +24,9 @@ const playGame = (rool, play) => {
       
       i++
       if (i === 0) {
-        console.log(`Let's try again, ${userName}!`)
+
+
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'\nLet's try again, ${userName}!`)
         break
       } else if (i === 3) {
         console.log(`Congratulations, ${userName}!`)
