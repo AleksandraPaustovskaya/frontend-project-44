@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { helloWorld } from '../src/index.js'
+import name from '../src/cli.js'
 
-let userName = helloWorld()
+let userName = name()

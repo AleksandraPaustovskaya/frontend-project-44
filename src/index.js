@@ -2,11 +2,7 @@ import readline from 'readline-sync'
 import name from '../src/cli.js'
 
 const helloWorld = (rool='') => {
-  console.log('Welcome to the Brain Games!')
-
-  console.log('May I have your name?')
-  const userName = name()
-  console.log(`Hello, ${userName}!`)
+  let userName = name()
   if(rool) {
       console.log(rool)
   }
