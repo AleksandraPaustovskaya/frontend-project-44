@@ -10,7 +10,7 @@ const playGCD = () => {
     let counter = 1;
     let gcd = b;
 
-    question(`${a} ${b}`)
+    console.log('Question: '`${a} ${b}`)
 
 
     // while (b/counter >= 1) {
