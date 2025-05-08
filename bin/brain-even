@@ -6,11 +6,10 @@ const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no"
 
 const playEven = () => {
     let number = randomFrom1to99()
-    question(number)
  
     const answer = number % 2 === 0 ? 'yes' : 'no'
 
-    return answer    
+    return [number, answer]    
 }
 
 playGame(evenPlayRools, playEven)
