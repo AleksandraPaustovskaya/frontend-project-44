@@ -7,7 +7,7 @@ const playGSD = () => {
     let a = randomFrom1to99(3)
     let b = randomFrom1to99()
 
-    console.log(`Question: ${a} ${b}`)
+    question(`${a} ${b}`)
     let counter = 1;
     let gsd = b;
 
