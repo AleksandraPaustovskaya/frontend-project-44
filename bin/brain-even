@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-import {randomFrom1to99, playGame} from '../src/index.js'
+import {randomFrom1to99, playGame, question} from '../src/index.js'
 const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 
 const playEven = () => {
     let number = randomFrom1to99()
-    console.log(`Question: ${number}`)
+    question(number)
  
     const answer = number % 2 === 0 ? 'yes' : 'no'
 
