@@ -1,5 +1,7 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
+const pleyerName = name()
+
 
 const helloWorld = (rool='') => {
   
@@ -18,7 +20,6 @@ const question = (str) => {
 }
 
 const playGame = (rool, play) => {
-  const pleyerName = name()
   if(rool) {
       console.log(rool)
   }
