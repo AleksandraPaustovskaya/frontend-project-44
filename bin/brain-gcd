@@ -6,7 +6,7 @@ const gcdPlayRools = 'Find the greatest common divisor of given numbers.'
 const playGCD = () => {
     let a = randomFrom1to99(3)
     let b = randomFrom1to99()
-    question(`${a} ${b}`)
+    console.log(`Question: ${a} ${b}`)
 
     let counter = 1;
     let gcd = b;
