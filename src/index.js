@@ -9,8 +9,8 @@ const randomFrom1to99 = (numberOfNumbers = 2) => {
     return rand
 }
 
-const question = (str) => {
-    console.log('Question:', str)
+const question = (str1, str2='') => {
+    console.log('Question:', str1, str2)
     
 }
 
