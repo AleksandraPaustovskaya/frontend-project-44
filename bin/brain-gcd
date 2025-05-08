@@ -4,7 +4,7 @@ import {playGame, randomFrom1to99, question} from '../src/index.js'
 const gcdPlayRools = 'Find the greatest common divisor of given numbers'
 
 const isGSD = (max, min) => {
-    question(`${max} ${min}`)
+    console.log(`Question: ${max} ${min}`)
     let counter = 1;
     let gsd = min;
     while (min/counter >= 1) {
