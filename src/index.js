@@ -9,6 +9,11 @@ const randomFrom1to99 = (numberOfNumbers = 2) => {
     return rand
 }
 
+const question = (str) => {
+    console.log(`Question: ${str}`)
+    
+}
+
 
 const playGame = (rool, play) => {
     let i = 0;
@@ -36,4 +41,4 @@ const playGame = (rool, play) => {
 
 }
 
-export {randomFrom1to99, playGame}
+export {randomFrom1to99, playGame, question}
