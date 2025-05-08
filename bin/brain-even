@@ -9,7 +9,7 @@ const evenLog = (num) => num % 2 === 0 ? 'yes' : 'no'
 const playEven = () => {
 
     let number = randomFrom1to99()
-    let answer = question(number)
+    let answer = question(Number(number))
   
     let rightAnswer = evenLog(number)
 
