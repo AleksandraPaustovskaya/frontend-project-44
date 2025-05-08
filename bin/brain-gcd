@@ -10,17 +10,20 @@ const playGCD = () => {
     console.log("Question:", a, b)
     let counter = 1;
     let gcd = b;
+    let answer
 
     while (b/counter >= 1) {
         gcd = b/counter
         if (Math.floor(b/gcd)*gcd === b) {
             if (Math.floor(a/(gcd))*gcd === a) {
-                return `${gcd}`
+                answer = `${gcd}`
+                return answer
             }
         }
         counter++
     }
-    return `${gcd}`
+    answer = `${gcd}`
+    return answer
 }
 
 
