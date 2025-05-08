@@ -2,11 +2,7 @@ import readline from 'readline-sync'
 import name from '../src/cli.js'
 
 const helloWorld = (rool='') => {
-  let userName = name()
-  if(rool) {
-      console.log(rool)
-  }
-  return userName
+  
 }
 
 const randomFrom1to99 = (numberOfNumbers = 2) => {
@@ -20,13 +16,16 @@ const question = (str) => {
 }
 
 const playGame = (rool, play) => {
-  const pleyerName = helloWorld(rool)
-
+  const pleyerName = name()
+  if(rool) {
+      console.log(rool)
+  }
+  
   let i = 0
 
   while (i < 3) {
     const [ask, rightAnswer] = play()
-    //question(ask)
+    question(ask)
     const answer = readline.question('Your answer: ')
 
     // console.log(f)

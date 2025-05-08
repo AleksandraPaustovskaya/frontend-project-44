@@ -8,10 +8,8 @@ const evenLog = (num) => num % 2 === 0 ? 'yes' : 'no'
 
 
 const playEven = () => {
-    //const userName = name;
 
     let number = randomFrom1to99()
-    question(number)
  
     let answer = evenLog(number)
 
