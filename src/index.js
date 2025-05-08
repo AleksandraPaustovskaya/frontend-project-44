@@ -26,7 +26,7 @@ const playGame = (rool, play) => {
 
   while (i < 3) {
     const [ask, rightAnswer] = play()
-    question(ask)
+    //question(ask)
     const answer = readline.question('Your answer: ')
 
     // console.log(f)
