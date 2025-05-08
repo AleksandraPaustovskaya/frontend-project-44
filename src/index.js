@@ -13,6 +13,8 @@ const randomFrom1to99 = (numberOfNumbers = 2) => {
 
 const question = (str) => {
   console.log(`Question: `, str)
+  const answer = readline.question('Your answer: ')
+  return answer
 }
 
 const playGame = (rool, play) => {
@@ -20,13 +22,11 @@ const playGame = (rool, play) => {
   if(rool) {
       console.log(rool)
   }
-  
+
   let i = 0
 
   while (i < 3) {
-    const [ask, rightAnswer] = play()
-    question(ask)
-    const answer = readline.question('Your answer: ')
+    const [rightAnswer, answer] = play()
 
     // console.log(f)
 

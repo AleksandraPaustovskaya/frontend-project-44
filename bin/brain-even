@@ -10,10 +10,11 @@ const evenLog = (num) => num % 2 === 0 ? 'yes' : 'no'
 const playEven = () => {
 
     let number = randomFrom1to99()
- 
-    let answer = evenLog(number)
+    let answer = question(number)
+  
+    let rightAnswer = evenLog(number)
 
-    return [number, answer]    
+    return [rightAnswer, answer]    
 }
 
 playGame(evenPlayRools, playEven)
