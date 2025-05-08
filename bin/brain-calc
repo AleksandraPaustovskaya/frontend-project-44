@@ -12,7 +12,7 @@ const playCalc = () => {
     let sign = signs[(randomFrom1to99() + a + b) % 3]
     
 
-    let question = `${a} ${sign} ${b}`
+    question(`${a} ${sign} ${b}`)
 
     let answer
     if (sign === '+') {
@@ -24,7 +24,7 @@ const playCalc = () => {
     }
 
     // console.log(answer);
-    return [question, `${answer}`]
+    return `${answer}`
 }
 
 playGame(calcPlayRools, playCalc)
