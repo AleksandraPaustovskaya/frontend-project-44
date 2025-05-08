@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { getJSDocEnumTag } from 'typescript';
 import {playGame, randomFrom1to99, question} from '../src/index.js'
-const gcdPlayRools = 'Find the greatest common divisor of given numbers'
+const gcdPlayRools = 'Find the greatest common divisor of given numbers.'
 
 const playGCD = () => {
     let a = randomFrom1to99(3)
