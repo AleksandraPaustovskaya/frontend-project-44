@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import playGame from '../src/index.js'
-const progressionPlayRools = 'What file is missing in the progression'
+const progressionPlayRools = 'What number is missing in the progression?'
 
 const playProgression = (random) => {
   let quantityOfProgression = 10
