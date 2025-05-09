@@ -1,29 +1,26 @@
 #!/usr/bin/env node
-import { getJSDocEnumTag } from 'typescript';
-import {playGame, randomFrom1to99, question} from '../src/index.js'
+import playGame from '../src/index.js'
 const gcdPlayRools = 'Find the greatest common divisor of given numbers.'
 
-const playGCD = () => {
-    let a = randomFrom1to99(3)
-    let b = randomFrom1to99()
+const playGCD = (random) => {
+    let a = random(3)
+    let b = random()
 
     let counter = 1;
     let gcd = b;
-
-    console.log('Question: ',`${a} ${b}`)
 
 
     while (b/counter >= 1) {
         gcd = b/counter
         if (Math.floor(b/gcd)*gcd === b) {
             if (Math.floor(a/(gcd))*gcd === a) {
-                return `${gcd}`
+                return [`${a} ${b}`, `${gcd}`]
             }
         }
         counter++
     }
 
-    return `${gcd}`
+    return [`${a} ${b}`, `${gcd}`]
 }
 
 
