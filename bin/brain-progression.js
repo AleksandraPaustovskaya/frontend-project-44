@@ -15,7 +15,7 @@ const playProgression = (random) => {
   let answer = progressionCollect[positionStealth]
   progressionCollect[positionStealth] = '..'
 
-  return [progressionCollect, answer]
+  return [progressionCollect, `${answer}`]
 }
 
 playGame(progressionPlayRools, playProgression)
