@@ -1,19 +1,14 @@
 #!/usr/bin/env node
-import {  playGame, randomFrom1to99, question} from "../src/index.js"
+import playGame from "../src/index.js"
 const calcPlayRools = 'What is the result of the expression?'
 
-const playCalc = () => {
-
+const playCalc = (random) => {
     const signs = ['+', '-', '*']
 
-
-    let a = randomFrom1to99()
-    let b = randomFrom1to99() 
-    let sign = signs[(randomFrom1to99() + a + b) % 3]
+    let a = random()
+    let b = random() 
+    let sign = signs[random(1) % 3]
     
-
-    question(`${a} ${sign} ${b}`)
-
     let answer
     if (sign === '+') {
         answer = a + b;
@@ -23,8 +18,7 @@ const playCalc = () => {
         answer = a * b
     }
 
-    // console.log(answer);
-    return `${answer}`
+    return [`${a} ${sign} ${b}`, `${answer}`]
 }
 
 playGame(calcPlayRools, playCalc)
