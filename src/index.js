@@ -1,35 +1,29 @@
 import readline from 'readline-sync'
 import name from '../src/cli.js'
 
-
-
-const randomFrom1to99 = (numberOfNumbers = 2) => {
-  let number = 10 ** numberOfNumbers
-  const rand = Math.floor(Math.random() * number)
-  return rand
-}
-
-const question = (str) => {
-  console.log(`Question: ${str}`)
-  
-}
-
-
 const playGame = (rool, play) => {
-    const helloWorld = (rool='') => {
-        const userName = name()
-          if(rool) {
-            console.log(rool)
-        }
-        return userName
+  const helloWorld = (rool = '') => {
+    const userName = name()
+    if (rool) {
+      console.log(rool)
     }
-    const playerName = helloWorld(rool);
-  
-    let i = 0
+    return userName
+  }
+  const question = (str) => {
+    console.log(`Question: ${str}`)
+  }
+  const randomFrom1to99 = (numberOfNumbers = 2) => {
+    let number = 10 ** numberOfNumbers
+    const rand = Math.floor(Math.random() * number)
+    return rand
+  }
+  const playerName = helloWorld(rool)
+
+  let i = 0
 
   while (i < 3) {
-    const rightAnswer = play()
-
+    const [number, rightAnswer] = play(randomFrom1to99)
+    question(number)
     const answer = readline.question('Your answer: ')
 
     // console.log(f)
@@ -48,4 +42,4 @@ const playGame = (rool, play) => {
   }
 }
 
-export { randomFrom1to99, playGame, question}
+export default playGame
