@@ -19,7 +19,7 @@ const playGCD = (random) => {
     counter++
   }
 
-  //return [`${a} ${b}`, `${gcd}`]
+  return -1
 }
 
 playGame(gcdPlayRools, playGCD)
