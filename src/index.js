@@ -23,7 +23,7 @@ const playGame = (rool, play) => {
 
   while (i < 3) {
     const [number, rightAnswer] = play(randomFrom1to99)
-    console.log('Question: ', number)
+    console.log('Question:', number)
     const answer = readline.question('Your answer: ')
 
     // console.log(f)
