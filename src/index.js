@@ -1,8 +1,8 @@
 import readline from 'readline-sync'
-import name from '../src/cli.js'
-let userName = name()
+import userName from '../bin/brain-games.js'
 
 const playGame = (rool, play) => {
+  let namePlayer = userName
   const randomFrom1to99 = (numberOfNumbers = 2) => {
     let number = 10 ** numberOfNumbers
     const rand = Math.floor(Math.random() * number)
@@ -21,11 +21,11 @@ const playGame = (rool, play) => {
     i++
     if (i === 0) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`)
-      console.log(`Let's try again, ${userName}!`)
+      console.log(`Let's try again, ${namePlayer}!`)
       break
     }
     else if (i === 3) {
-      console.log(`Congratulations, ${userName}!`)
+      console.log(`Congratulations, ${namePlayer}!`)
     }
   }
 }
