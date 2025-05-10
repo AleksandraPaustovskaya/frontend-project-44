@@ -1,4 +1,3 @@
-quotes: [0, 'single']
 
 import js from '@eslint/js'
 import globals from 'globals'

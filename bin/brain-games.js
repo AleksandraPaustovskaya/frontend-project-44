@@ -3,3 +3,5 @@
 import name from '../src/cli.js'
 
 let userName = name()
+
+return userName
