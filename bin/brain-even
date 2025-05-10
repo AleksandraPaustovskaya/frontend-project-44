@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import  playGame from '../src/index.js'
-
+//import  playGame from '../src/index.js'
 const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no".'
+import playGame from "../src/index.js"
 
 
 
@@ -14,3 +14,5 @@ const playEven = (random) => {
 }
 
 playGame(evenPlayRools, playEven)
+
+export default evenPlayRools
