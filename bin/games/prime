@@ -1,4 +1,3 @@
-#! usr/bin/etc node
 
 const playP = (random) => {
   const num = random()

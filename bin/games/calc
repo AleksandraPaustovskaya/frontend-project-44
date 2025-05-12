@@ -1,4 +1,3 @@
-#!/usr/bin/etc node
 
 const playC = (random) => {
     const signs = ['+', '-', '*']
