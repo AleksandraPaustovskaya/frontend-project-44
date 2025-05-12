@@ -4,4 +4,4 @@ import playE from './games/even'
 
 const evenPlayRools = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-playGame(evenPlayRools, play)
+playGame(evenPlayRools, playE)
