@@ -1,0 +1,22 @@
+#!/usr/bin/etc node
+
+const playC = (random) => {
+    const signs = ['+', '-', '*']
+
+    let a = random()
+    let b = random() 
+    let sign = signs[random(1) % 3]
+    
+    let answer
+    if (sign === '+') {
+        answer = a + b;
+    } else if (sign === '-') {
+        answer = a - b
+    } else {
+        answer = a * b
+    }
+
+    return [`${a} ${sign} ${b}`, `${answer}`]
+}
+
+export default playC

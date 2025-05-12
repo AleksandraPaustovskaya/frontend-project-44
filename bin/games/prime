@@ -1,0 +1,16 @@
+#! usr/bin/etc node
+
+const playP = (random) => {
+  const num = random()
+  let answer = 'yes'
+
+  for (let i = 2; num / i > 1; i++) {
+    if (num % i === 0) {
+      answer = 'no'
+      return [num, answer]
+    }
+  }
+  return [num, answer]
+}
+
+export default playP

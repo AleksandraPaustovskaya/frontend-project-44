@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const playPr = (random) => {
+  let quantityOfProgression = 10
+  let stepOfProgression = random(1)
+  let positionStealth = Number(random(1))
+  const progressionCollect = [random(1)]
+
+  for (let i = 1; i < quantityOfProgression; i++) {
+    let nextElement = progressionCollect[i - 1] + stepOfProgression
+    progressionCollect.push(nextElement)
+  }
+  let answer = progressionCollect[positionStealth]
+  progressionCollect[positionStealth] = '..'
+
+  const questionProg = progressionCollect.join(' ')
+
+  return [questionProg, `${answer}`]
+}
+
+export default playPr

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const playE = (random) => {
+    let number = random()
+    
+    let rightAnswer = number % 2 === 0 ? 'yes' : 'no'
+  
+    return [number, rightAnswer]   
+  }
+
+  export default playE

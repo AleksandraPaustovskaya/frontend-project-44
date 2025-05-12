@@ -1,24 +1,7 @@
 #!/usr/bin/env node
 import playGame from "../src/index.js"
+import playC from './games/calc'
+
 const calcPlayRools = 'What is the result of the expression?'
 
-const playCalc = (random) => {
-    const signs = ['+', '-', '*']
-
-    let a = random()
-    let b = random() 
-    let sign = signs[random(1) % 3]
-    
-    let answer
-    if (sign === '+') {
-        answer = a + b;
-    } else if (sign === '-') {
-        answer = a - b
-    } else {
-        answer = a * b
-    }
-
-    return [`${a} ${sign} ${b}`, `${answer}`]
-}
-
-playGame(calcPlayRools, playCalc)
+playGame(calcPlayRools, playC)
